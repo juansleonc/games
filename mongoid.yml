@@ -14,11 +14,7 @@ test:
 production:
   clients:
     default:
-      hosts:
-        - ds023932.mlab.com:23932
-      database: heroku_bv48j3db
-
-      options:
-        connect_timeout: 15
-        user: <%= ENV['MONGO_USER'] %>
-        password: <%= ENV['MONGO_PWD'] %>
+      uri: mongodb+srv://juansleonc:qwerty123@cluster0.d6qraru.mongodb.net/games-prod?retryWrites=true&w=majority
+  options:
+    use_activesupport_time_zone: true
+    log_level: :warn
