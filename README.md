@@ -10,6 +10,7 @@ Este proyecto implementa una API de juegos utilizando Sinatra rackup y MongoDB. 
   - [Hangman](#hangman)
   - [Puzzle](#puzzle)
 
+
 ## Uso
 
 1. Inicia el servidor:
@@ -37,6 +38,17 @@ Este proyecto implementa una API de juegos utilizando Sinatra rackup y MongoDB. 
 
 ### Hangman
 
+Podras jugar por medio de una interfaz de consola 
+    ```bash
+    docker compose run web /bin/bash
+    ```
+    dentro de la consola de contenedor ejecutar:
+   
+    ```bash
+    ruby hangman_client.rb
+    ```
+
+    
 - **Iniciar un nuevo juego de Hangman**
 
   ```http
