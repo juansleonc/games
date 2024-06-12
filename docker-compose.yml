@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "9292:9292"
+    volumes:
+      - .:/myapp
+    depends_on:
+      - db
+    network_mode: "host"
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    network_mode: "host"
+
+
+volumes:
+  mongo-data:
